@@ -1,3 +1,9 @@
+//you are given a binary search tree each node containing an integer,all internal
+//nodes have two children and all leaves are in the same depth.Write an effecient
+//pseducode to find the median of the values stored in bst
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 struct node
@@ -30,13 +36,7 @@ node* insert(node* root,int key)
     else if(key>root->data) root->right=insert(root->right,key);
     return root;
 }
-void inorder(node* &root,vector<int>&arr)
-{
-    if(root==NULL) return ;
-    inorder(root->left,arr);
-    arr.push_back(root->data);
-    inorder(root->right,arr);
-}
+
 void fun(node* &root,node* &curr,node* & prev,int x,int &c,int &f)
 {
     if(root==NULL) return ;
