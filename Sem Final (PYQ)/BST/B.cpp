@@ -1,5 +1,5 @@
 //write a code to traverse a binary search tree in such order that the generated output
-//is in descinding order
+//is in descending order
 
 #include<bits/stdc++.h>
 using namespace std;
