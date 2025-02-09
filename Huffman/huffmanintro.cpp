@@ -62,7 +62,7 @@ void huffman(string x)
         minheap.pop();
         node* right=minheap.top();
         minheap.pop();
-        node* top=new node('#',left->fre+right->fre);
+        node* top=new node('#',left->fre+right->fre); //dummy node for summation
         //make the left& right the child
         top->left=left;
         top->right=right;
