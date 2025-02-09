@@ -29,3 +29,5 @@ int main()
 }
 //Time Complexity: O(V^2), where V is the number of vertices in the graph.
 //Auxiliary Space: O(V^2)
+//edge insertion : o(1)
+//edge query: o(1)
