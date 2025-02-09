@@ -31,3 +31,5 @@ int main()
 }
 //Time Complexity: o(v+e) //vertex=v, e=edges
 //Auxiliary Space: o(v+e)
+//edge insertion :o(1)
+//edge query: o(v) // transverse all the vertex
