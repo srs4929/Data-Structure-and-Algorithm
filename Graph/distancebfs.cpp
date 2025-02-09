@@ -33,16 +33,16 @@ using namespace std;
 void bfs(vector<vector<int>>&arr,vector<bool>&visit,vector<int>&dist,int s)
 {
     queue<int>q;
-    q.push(s);
+    q.push(s);  //o(1)
     visit[s]=true;
     dist[s]=0;
     
     // find the adjacent one
-    while(!q.empty()){
+    while(!q.empty()){  //o(v) in the worst case visit all vertex
         
         int curr=q.front();
         q.pop();
-        for(int x: arr[curr])
+        for(int x: arr[curr]) // visit adjacent nodes(edges)  o(e) 
         {
             if(!visit[x])
             {
@@ -65,7 +65,7 @@ int main()
     {
         int n,m;
         cin>>n>>m; // n=node/vertex & m =edge
-        vector<vector<int>>arr(n);
+        vector<vector<int>>arr(n); //Space : o(vertex +edge)
         //creating adj list
         for(int i=0;i<m;i++)
         {
@@ -92,4 +92,8 @@ int main()
         
     }
 }
-
+//time complexity : o(v+e)
+//space complexity :o(v+e)
+//why complexity o(v+e) not v(v*e) 
+// In BFS we are transversing every vertex once and every edge once. So we count up to vertex and edge total.
+// For a complexity of O(V * E), each vertex would have to iterate over all edges for every node, which is not the case in BFS.
